@@ -37,6 +37,11 @@
 
 /* Base Layout */
 
+body {
+    font-family: 'CircularSp-Book';
+    color: white;
+}
+
 .app-main {
     display: flex;
     flex-direction: column;
@@ -57,6 +62,7 @@
 .app-side {
     background-color: var(--dark);
     flex: 0 0;
+    padding: 20px;
 }
 
 .app-body {
@@ -69,32 +75,117 @@
 .app-toolbar {
     display: flex;
     justify-content: space-between;
+    padding: 12px;
 }
 
 .toolbar-center {
     flex: 0 1 50%;
 }
 
+.player-controls {
+    font-family: 'spoticon_regular';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.player-controls li {
+    cursor: pointer;
+    transition: 200ms all;
+}
+
+.player-controls li:hover {
+    cursor: pointer;
+    transform: scale(120%);
+}
+
+.play {
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    height: 35px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
 .player-timeline {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.track-line-wrapper {
+    flex: 1;
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.track-line,
+.track-line-bg {    
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    left: 0px;
+    height: 4px;
+    border-radius: 9999px;
 }
 
 .track-line {
-    flex: 1;
+    background-color: rgba(255, 255, 255, 1);
+    animation: timeline-run 60s linear  infinite
+}
+
+.track-line-bg {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.track-line-ball {
+    position: absolute;
+    left: 100%;
+    margin-left: -6px;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+
+.track-line-wrapper:hover .track-line {
+    background-color: var(--lime-green);
+}
+
+.track-line-wrapper:hover .track-line-ball {
+    display: block;
+}
+
+/* Bonus Timeline Animation */
+
+@keyframes timeline-run {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 /* Debug */
 
-.debug .app-upper *,
-.debug .app-lower * {
+.debug .app-upper div,
+.debug .app-lower div {
     border: 1px solid white;
     padding: 10px 20px;
 }
 
-/* .debug .toolbar-left,
-.debug .toolbar-center,
-.debug .toolbar-right {
-    border: 1px solid white;
-    padding: 20px;
-} */
