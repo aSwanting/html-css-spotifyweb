@@ -1,0 +1,38 @@
+/* Variables */
+
+:root {
+    --dark: #000000;
+    --dark-grey: #141922;
+    --grey: #282828;
+    --lime-green: #ADFF2F;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: CircularSp-Bold;
+    src: url(../fonts/CircularSp-Bold.woff2);
+}
+
+@font-face {
+    font-family: CircularSp-Book;
+    src: url(../fonts/CircularSp-Book.woff2);
+}
+
+@font-face {
+    font-family: CircularSpTitle-Black;
+    src: url(../fonts/CircularSpTitle-Black.woff2);
+}
+
+@font-face {
+    font-family: CircularSpTitle-Bold;
+    src: url(../fonts/CircularSpTitle-Bold.woff2);
+}
+
+@font-face {
+    font-family: spoticon_regular;
+    src: url(../fonts/spoticon_regular.woff2);
+}
+
+
+/* Base Layout */
