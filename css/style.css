@@ -36,3 +36,65 @@
 
 
 /* Base Layout */
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.app-upper {
+    flex: 1;
+    display: flex;
+}
+
+.app-lower {
+    background: var(--grey);
+    flex: 0 0;
+}
+
+.app-side {
+    background-color: var(--dark);
+    flex: 0 0;
+}
+
+.app-body {
+    background-color: var(--dark-grey);
+    flex: 1;
+}
+
+/* Toolbar Layout */
+
+.app-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toolbar-center {
+    flex: 0 1 50%;
+}
+
+.player-timeline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.track-line {
+    flex: 1;
+}
+
+/* Debug */
+
+.debug .app-upper *,
+.debug .app-lower * {
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+/* .debug .toolbar-left,
+.debug .toolbar-center,
+.debug .toolbar-right {
+    border: 1px solid white;
+    padding: 20px;
+} */
