@@ -449,9 +449,16 @@ body {
     transform: scale(110%);
 }
 
-.body-contents span:hover {
+.body-contents span {
     cursor: pointer;
+    margin-inline: 4px;
+    display: inline-block;
+    transition: 300ms all;
+}
+
+.body-contents span:hover {
     text-decoration: underline var(--lime-green);
+    transform: rotate(360deg);
 }
 
 
