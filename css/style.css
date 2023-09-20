@@ -285,6 +285,25 @@ body {
 
 .sidebar-menu {
     gap: 8px;
+    flex-direction: column-reverse;
+}
+
+.sidebar-menu li {
+    padding-inline: 13px;
+}
+
+.sidebar-menu li.active {
+    border-left: 3px solid var(--lime-green);
+    padding-inline: 10px;
+}
+
+.sidebar-menu li:hover {
+    border-left: 3px solid var(--lime-green);
+    padding-inline: 10px;
+}
+
+.sidebar-menu li:hover ~ .active {
+    border-left: 3px solid transparent;
 }
 
 .sidebar-playlist {
@@ -431,7 +450,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 40px;    
+    padding-right: 40px;
 }
 
 .upgrade-button {
@@ -540,6 +559,17 @@ body {
     .sidebar-menu li,
     .sidebar-playlist li {
         padding-left: 10px;
+    }
+
+    .sidebar-menu li.active {
+        border-left: 3px solid var(--lime-green);
+        margin-left: -15px;
+        padding-left: 22px;
+    }
+
+    .sidebar-menu li:hover {
+        margin-left: -15px;
+        padding-left: 22px;
     }
 
     .sidebar-text {
