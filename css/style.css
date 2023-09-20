@@ -415,14 +415,40 @@ body {
 
 /* Main Body */
 
-
 .body-contents {
     background-color: rgb(27, 35, 56);
     padding: 10px;
     height: 100%;
     overflow-y: scroll;
     font-size: 40px;
+    margin-top: -100px;
 }
+
+.premium-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;    
+}
+
+.upgrade-button {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    transition: 500ms all;
+}
+
+.upgrade-button:hover {
+    transform: scale(110%);
+}
+
 
 
 /* Media Queries */
