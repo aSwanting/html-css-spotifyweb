@@ -46,13 +46,14 @@ body {
 .app-main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
 .app-upper {
     flex: 1;
     display: flex;
+    overflow: hidden;
 }
 
 .app-lower {
@@ -412,6 +413,19 @@ body {
 }
 
 
+/* Main Body */
+
+
+.body-contents {
+    background-color: rgb(27, 35, 56);
+    padding: 10px;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 40px;
+}
+
+
+/* Media Queries */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
