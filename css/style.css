@@ -4,6 +4,7 @@
     --dark: #000000;
     --dark-grey: #141922;
     --grey: #282828;
+    --light-grey: #A3A3A3;
     --lime-green: #ADFF2F;
 }
 
@@ -57,12 +58,6 @@ body {
 .app-lower {
     background: var(--grey);
     flex: 0 0;
-}
-
-.app-side {
-    background-color: var(--dark);
-    flex: 0 0;
-    padding: 20px;
 }
 
 .app-body {
@@ -260,6 +255,162 @@ body {
 }
 
 
+/* Sidebar */
+
+.app-side {
+    background-color: var(--dark);
+    flex-shrink: 0;
+    width: 50px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-md {
+    display: none;
+}
+
+.logo-sm {
+    width: 30px;
+}
+
+.sidebar-menu,
+.sidebar-playlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu {
+    gap: 8px;
+}
+
+.sidebar-playlist {
+    gap: 14px;
+}
+
+.sidebar-menu li,
+.sidebar-playlist li {
+    width: fit-content;
+}
+
+.sidebar-menu li .sidebar-icon,
+.sidebar-menu li .sidebar-text {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.sidebar-menu li .sidebar-text.home {
+    opacity: 1;
+}
+
+.sidebar-menu li:hover .sidebar-icon,
+.sidebar-menu li:hover .sidebar-text {
+    opacity: 1;
+}
+
+.sidebar-icon,
+.playlist-icon {
+    font-family: 'spoticon_regular';
+    font-size: 26px;
+    vertical-align: sub;
+}
+
+.sidebar-text {
+    display: none;
+    font-size: 16px;
+}
+
+.sidebar-icon {
+    font-family: 'spoticon_regular';
+    font-size: 26px;
+}
+
+.sidebar-playlist {
+    display: none;
+}
+
+.playlist-title {
+    font-family: 'CircularSp-Bold';
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.playlist-icon {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.sidebar-playlist li .playlist-icon,
+.sidebar-playlist li .playlist-text {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.sidebar-playlist li:hover .playlist-icon,
+.sidebar-playlist li:hover .playlist-text {
+    opacity: 1;
+}
+
+.app-user {
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.dl-icon,
+.user-icon {
+    font-family: 'spoticon_regular';
+    vertical-align: bottom;
+}
+
+.dl-app {
+    cursor: pointer;
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+.dl-app:hover {
+    opacity: 1;
+}
+
+.dl-icon,
+.dl-text {
+    font-size: 16px;
+}
+
+.user {
+    font-family: 'CircularSp-Bold';
+    padding-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.user-icon {
+    background-color: var(--light-grey);
+    font-size: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-text {
+    display: none;
+    font-size: 18px;
+}
+
+.dl-text {
+    display: none;
+}
+
 
 
 /* Small devices (landscape phones, 576px and up) */
@@ -313,6 +464,61 @@ body {
 
     .play {
         height: 30px;
+    }
+
+    .app-side {
+        width: 250px;
+        padding: 20px 0px 0px 15px;
+        align-items: flex-start;
+    }
+
+    .logo-md {
+        display: block;
+        width: 150px
+    }
+
+    .logo-sm {
+        display: none;
+    }
+
+    .sidebar-icon {
+        padding-right: 6px;
+    }
+
+    .sidebar-menu li,
+    .sidebar-playlist li {
+        padding-left: 10px;
+    }
+
+    .sidebar-text {
+        display: inline;
+    }
+
+    .sidebar-playlist {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dl-app {
+        padding-left: 5px;
+    }
+
+    .app-user {
+        text-align: left;
+    }
+
+    .user {
+        border-top: 1px solid var(--light-grey);
+    }
+
+    .user-text,
+    .dl-text {
+        display: inline;
+        margin-left: 6px;
+    }
+
+    .user-icon {
+        width: 27px;
     }
 }
 
