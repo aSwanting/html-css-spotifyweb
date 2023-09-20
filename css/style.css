@@ -449,6 +449,11 @@ body {
     transform: scale(110%);
 }
 
+.body-contents span:hover {
+    cursor: pointer;
+    text-decoration: underline var(--lime-green);
+}
+
 
 
 /* Media Queries */
