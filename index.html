@@ -20,12 +20,25 @@
         <!-- app toolbar -->
         <div class="app-lower">
             <div class="app-toolbar">
-                <div class="toolbar-left"></div>
+
+                <div class="toolbar-left">
+                    <img class="now-playing-img" src="./img/player_left.jpeg" alt="">
+                    <div class="now-playing-info">
+                        <p class="track-title">Second Sight</p>
+                        <a href="#" class="track-artist">Artemis</a>
+                    </div>
+                    <ul class="now-playing-controls">
+                        <li class="shuffle">&#xf320;</li>
+                        <li class="shuffle">&#xf4a5;</li>
+                    </ul>
+
+                </div>
+
                 <div class="toolbar-center">
                     <ul class="player-controls">
                         <li class="shuffle">&#xf144;</li>
                         <li class="previous-track">&#xf146;</li>
-                        <li class="play">&#xf133;</li>
+                        <li class="play">&#xf133;</li><!--  -->
                         <li class="next-track">&#xf148;</li>
                         <li class="loop">&#xf13e;</li>
                     </ul>
@@ -35,16 +48,30 @@
                         </div>
                         <div class="track-line-wrapper">
                             <div class="track-line-bg"></div>
-                            <div class="track-line">
+                            <div class="track-line  animated-track-line">
                                 <div class="track-line-ball"></div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="track-length">
                             <p>4:20</p>
                         </div>
                     </div>
                 </div>
-                <div class="toolbar-right"></div>
+
+                <div class="toolbar-right">
+                    <ul class="volume-controls">
+                        <li class="playlist">&#xf17c;</li>
+                        <li class="device">&#xf213;</li>
+                        <li class="volume">&#xf15e;</li>   
+                    </ul>
+                    <div class="track-line-wrapper volume-line-wrapper">
+                        <div class="track-line-bg volume-line-bg"></div>
+                        <div class="track-line volume-line">
+                            <div class="track-line-ball"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>

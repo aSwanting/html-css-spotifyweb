@@ -75,11 +75,86 @@ body {
 .app-toolbar {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    align-items: center;
+    padding: 0 8px;
+    gap: 20px;
+    height: 80px;
+}
+
+.toolbar-left,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.now-playing-img {
+    width: 40%;
+    max-width: 40px;
+}
+
+.track-title {
+    font-size: 14px;
+}
+
+.track-artist {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.now-playing-info {
+    line-height: 1;
+    width: min-content;
+}
+
+.now-playing-info * {
+    cursor: pointer;
+}
+
+.now-playing-info *:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.now-playing-controls,
+.volume-controls {
+    font-family: 'spoticon_regular';
+    display: flex;
+    align-items: center;
+}
+
+.now-playing-controls {
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.volume-controls {
+    font-size: 14px;
+    gap: 10px;
+}
+
+.volume-line-wrapper {
+    width: 60px;
+}
+
+.volume-line {
+    width: 75%;
+}
+
+.now-playing-controls * {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.now-playing-controls *:hover {
+    opacity: 1;
 }
 
 .toolbar-center {
-    flex: 0 1 50%;
+    flex: 0 1 45%;
+    max-width: 650px;
 }
 
 .player-controls {
@@ -87,9 +162,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    font-size: 25px;
-    margin-bottom: 10px;
+    gap: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .player-controls li {
@@ -105,7 +180,7 @@ body {
 .play {
     border: 3px solid currentColor;
     border-radius: 50%;
-    height: 35px;
+    height: 26px;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -117,7 +192,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     font-size: 12px;
 }
 
@@ -129,7 +204,7 @@ body {
 }
 
 .track-line,
-.track-line-bg {    
+.track-line-bg {
     position: absolute;
     top: 50%;
     margin-top: -2px;
@@ -140,12 +215,15 @@ body {
 
 .track-line {
     background-color: rgba(255, 255, 255, 1);
-    animation: timeline-run 60s linear  infinite
+}
+
+.animated-track-line {
+    animation: timeline-run 60s linear infinite
 }
 
 .track-line-bg {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .track-line-ball {
@@ -181,6 +259,122 @@ body {
     }
 }
 
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .app-body {
+        background-color: rgb(36, 59, 59);
+    }
+
+    .toolbar-left,
+    .toolbar-right {
+        gap: 12px;
+    }
+
+    .now-playing-img {
+        max-width: 50px;
+    }
+
+    .track-title {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .track-artist {
+        font-size: 12px;
+    }
+
+    .now-playing-info {
+        line-height: 1;
+    }
+
+    .now-playing-controls {
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .volume-controls {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .volume-line-wrapper {
+        width: 70px;
+    }
+
+    .player-controls {
+        gap: 14px;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .play {
+        height: 30px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .app-body {
+        background-color: rgb(85, 136, 108);
+    }
+
+    .toolbar-left,
+    .toolbar-right {
+        gap: 16px;
+    }
+
+    .now-playing-controls {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .player-controls {
+        gap: 14px;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .play {
+        height: 30px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .app-body {
+        background-color: rgb(69, 100, 100);
+    }
+
+    .now-playing-info {
+        width: fit-content;
+        margin-right: 20px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .app-body {
+        background-color: rgb(113, 103, 139);
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .app-body {
+        background-color: rgb(70, 95, 22);
+    }
+}
+
+
+
+
+
 /* Debug */
 
 .debug .app-upper div,
@@ -188,4 +382,3 @@ body {
     border: 1px solid white;
     padding: 10px 20px;
 }
-
