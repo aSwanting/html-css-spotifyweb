@@ -287,6 +287,11 @@ body {
     flex-direction: column-reverse;
 }
 
+.sidebar-playlist {
+    width: 100%;
+    overflow: auto;
+}
+
 .sidebar-menu li {
     padding-inline: 11px;
     padding-block: 2px;
@@ -596,6 +601,10 @@ body {
     background-color: var(--scrollbar-grey)
 }
 
+.sidebar-playlist::-webkit-scrollbar {
+    background-color: var(--dark);
+    width: 10px
+}
 
 /* Media Queries */
 
