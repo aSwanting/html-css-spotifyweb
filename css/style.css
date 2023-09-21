@@ -435,7 +435,7 @@ body {
 
 /* Main Body */
 
-.body-contents {   
+.body-contents {
     padding: 10px;
     height: 100%;
     overflow-y: auto;
@@ -540,9 +540,8 @@ body {
 }
 
 .music-card {
-    flex-basis: calc((100% / 2) - 8px);
+    width: calc((100% / 2) - 8px);
     padding: 20px 0;
-    max-width: 300px;
 }
 
 .music-card-cover {
@@ -579,6 +578,8 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
+
 
 .album-title {
     font-family: 'CircularSp-Bold';
@@ -696,7 +697,7 @@ body {
         border-left: 3px solid var(--lime-green);
         margin-left: -15px;
         padding-left: 20px;
-    }   
+    }
 
     .sidebar-text {
         display: inline;
@@ -729,6 +730,9 @@ body {
         width: 27px;
     }
 
+    .music-card {
+        width: calc((100% / 2) - 12px);
+    }
 
 }
 
@@ -761,7 +765,14 @@ body {
     }
 
     .music-card {
-        flex-basis: calc((100% / 4) - 12px);
+        width: calc((100% / 4) - 12px);
+    }
+
+    .album-title,
+    .album-artist {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
 }
@@ -779,19 +790,15 @@ body {
     }
 
     .music-card {
-        flex-basis: calc((100% / 6) - 12px);
+        width: calc((100% / 6) - 12px);
     }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-
-}
+@media (min-width: 1400px) {}
 
 
 /* Debug */
