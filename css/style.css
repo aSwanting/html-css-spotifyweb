@@ -3,6 +3,7 @@
 :root {
     --dark: #000000;
     --dark-grey: #141922;
+    --scrollbar-grey: #232a35;
     --grey: #282828;
     --light-grey: #A3A3A3;
     --lime-green: #ADFF2F;
@@ -429,8 +430,7 @@ body {
 
 /* Main Body */
 
-.body-contents {
-    background-color: rgb(27, 35, 56);
+.body-contents {   
     padding: 10px;
     height: 100%;
     overflow-y: auto;
@@ -585,14 +585,21 @@ body {
 }
 
 
+/* Toolbar Styling */
+
+::-webkit-scrollbar {
+    background-color: var(--dark-grey);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-grey)
+}
+
 
 /* Media Queries */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .app-body {
-        background-color: rgb(36, 59, 59);
-    }
 
     .toolbar-left,
     .toolbar-right {
@@ -717,9 +724,6 @@ body {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .app-body {
-        background-color: rgb(85, 136, 108);
-    }
 
     .toolbar-left,
     .toolbar-right {
@@ -754,9 +758,6 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .app-body {
-        background-color: rgb(69, 100, 100);
-    }
 
     .now-playing-info {
         width: fit-content;
@@ -774,16 +775,12 @@ body {
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .app-body {
-        background-color: rgb(113, 103, 139);
-    }
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-    .app-body {
-        background-color: rgb(70, 95, 22);
-    }
+
 }
 
 
