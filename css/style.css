@@ -435,7 +435,7 @@ body {
     height: 100%;
     overflow-y: auto;
     margin-top: -80px;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 /* Transparent Overlay */
@@ -444,6 +444,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     height: 80px;
     position: relative;
+    z-index: 9999;
     display: flex;
     justify-content: flex-end;
     align-items: center;
